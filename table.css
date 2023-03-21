@@ -1,0 +1,111 @@
+/* Styles for table */
+.table-container {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid green;
+  padding: 15px;
+  margin-top: 2%;
+  background-color: rgba(210, 244, 232, 0.3);
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: rgba(78, 228, 153, 0.3);
+  padding: 8px;
+  text-align: left;
+  font-family: Arial;
+  font-size: 15px;
+}
+
+td {
+  padding: 15px;
+  font-family: 'Times New Roman';
+  font-size: 17px;
+}
+
+.description {
+  text-align: center;
+  font-family: fantasy;
+  color: crimson;
+}
+
+img {
+  width: 100%;
+  max-width: 150px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(243, 217, 249);
+}
+
+.deshead {
+  background-color: rgb(150, 194, 196);
+  text-align: center;
+}
+
+.newtable {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.tablepara {
+  text-align: center;
+  align-items: center;
+}
+
+
+
+/* back button */
+#back-button {
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#back-button:hover {
+  background-color: #ff1010;
+  transform: scale(1.1);
+  transition: all 0.3S ease-out;
+
+}
+
+#back-button:active {
+  box-shadow: none;
+}
+
+#back-button:focus {
+  outline: none;
+}
+
+#back-button::before {
+  content: '\2190 ';
+}
+
+#back-button::after {
+  content: 'Back';
+  margin-left: 5px;
+}
+
+/* Position the button in the bottom right corner */
+#back-button {
+  position: fixed;
+  position: relative;
+  bottom: 20px;
+  right: 20px;
+}

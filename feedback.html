@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+  <link rel="stylesheet" href="allpages.css" type="text/css">
+  <link rel="icon" type="image/x-icon" href="images/comment.png">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+
+  <style>
+    .oops {
+      text-align: center;
+      color: rgb(69, 130, 133);
+      font-size: 30px;
+      margin: 5%;
+      margin-top: 10%;
+
+    }
+
+    .under {
+      text-align: center;
+      margin: 5%;
+
+    }
+
+    .under:hover {
+      transform: scale(1.1);
+      transition: all 0.5s ease-out;
+
+    }
+
+    img {
+      width: 300px;
+    }
+
+    /* Style for feedback form */
+    #feedback {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    #feedback h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #feedback label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    #feedback input[type="text"],
+    #feedback textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #feedback textarea {
+      height: 150px;
+    }
+
+    #feedback button[type="submit"] {
+      background-color: #0d6efd;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #feedback button[type="submit"]:hover {
+      background-color: #0c4f91;
+    }
+
+    /* Style for feedback list */
+    #feedback ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    #feedback li {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+
+    #feedback li strong {
+      font-weight: bold;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- Navebar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catogeries.html">Catogeries</a></li>
+      <li><a href="aboutme.html">About Us</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+
+
+
+  <div id="feedback">
+    <h2>Feedback</h2>
+    <form @submit.prevent="submitFeedback">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" v-model="name" required>
+      </div>
+      <div>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" v-model="comment" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div v-if="feedbacks.length">
+      <h3>Previous Feedbacks:</h3>
+      <ul>
+        <li v-for="feedback in feedbacks">
+          <strong>{{ feedback.name }}:</strong> {{ feedback.comment }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <br> <br>
+  <br> <br>
+  <br> <br>
+
+
+  <!-- footer area -->
+  <footer>
+    <p>&copy; 2023 Coded & Designed By <b class="rainbow">Prabhath Kaluarachchi</b></p>
+  </footer>
+
+
+
+  <script>
+    var app = new Vue({
+      el: '#feedback',
+      data: {
+        name: '',
+        comment: '',
+        feedbacks: []
+      },
+      methods: {
+        submitFeedback: function () {
+          this.feedbacks.push({
+            name: this.name,
+            comment: this.comment
+          });
+          this.name = '';
+          this.comment = '';
+        }
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>

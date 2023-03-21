@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="allpages.css" type="text/css">
+  <link rel="icon" type="image/x-icon" href="images/contact.png">
+
+
+  <style>
+    /* back button */
+
+    .oops {
+      text-align: center;
+      color: rgb(69, 130, 133);
+      font-size: 30px;
+      margin: 5%;
+      margin-top: 10%;
+
+    }
+
+    .under {
+      text-align: center;
+      margin: 5%;
+
+    }
+
+    .under:hover {
+      transform: scale(1.1);
+      transition: all 0.5s ease-out;
+
+    }
+
+    img {
+      width: 300px;
+    }
+
+
+    /* contact form */
+
+    #contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0069d9;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navebar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catogeries.html">Catogeries</a></li>
+      <li><a href="aboutme.html">About Us</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+
+
+  <div id="contact-form">
+    <h2>Contact Us</h2>
+    <form>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <br> <br>
+  <br> <br>
+
+
+  <!-- footer area -->
+  <footer>
+    <p>&copy; 2023 Coded & Designed By <b class="rainbow">Prabhath Kaluarachchi</b></p>
+  </footer>
+
+
+
+</body>
+
+</html>
